@@ -1,6 +1,6 @@
 package com.romanko.demo.generics.entity;
 
-interface Animal {
+public interface Animal {
 
     String species();
 

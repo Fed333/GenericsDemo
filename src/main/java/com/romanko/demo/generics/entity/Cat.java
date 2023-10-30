@@ -1,13 +1,9 @@
 package com.romanko.demo.generics.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class Cat implements Animal, Identifiable {
 
     @EqualsAndHashCode.Include

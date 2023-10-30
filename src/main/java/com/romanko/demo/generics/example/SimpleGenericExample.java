@@ -1,12 +1,19 @@
 package com.romanko.demo.generics.example;
 
+import lombok.SneakyThrows;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 1.1 What generics are and why we need them.
+ * 2.1 What generics are and why we need them.
  */
 public class SimpleGenericExample {
+
+
+    public static void main(String[] args) {
+
+    }
 
     public static <T> void print(T object) {
         System.out.println(object);

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * 1.2 Generic syntax
+ * 2.3 Invariance, covariance, contravariance
  * The shelter consists of enclosures and can contain several species inside different enclosures.
  * */
 @Getter
@@ -28,9 +28,7 @@ public class AnimalShelter {
     }
 
     public <T extends Cat> void addCat(T cat) {
-        // Why do we add the new cat like this?
-        // Why don't we just use addAnimal method?
-//         cats.addAnimal(cat);
+//         cats.addAnimal(cat); // Why don't we just use addAnimal method?
         List<? extends Cat> listOfCats = Stream.of(Collections.singletonList(cat), cats.getAnimals())
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
@@ -70,7 +68,7 @@ public class AnimalShelter {
 
     public Dog findDogById(Long id) {
         return dogs.getAnimals().stream()
-                .map(animal -> (Dog) animal)
+                .map(animal -> (Dog) animal) //Why do we need an extra type cast here?
                 .filter(dog -> dog.getId().equals(id))
                 .findAny().orElse(null);
     }
