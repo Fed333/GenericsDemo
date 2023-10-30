@@ -17,5 +17,24 @@ public class SimpleGenericExample {
         list.add(item);
         return list;
     }
+
+    public Double mapStringToDouble(String digit) {
+        Mapper<String, Double> mapper = new StringToDoubleMapper();
+
+        return mapper.map(digit);
+    }
+
 }
 
+interface Mapper<T, R> {
+
+    R map(T t);
+
+}
+
+class StringToDoubleMapper implements Mapper<String, Double> {
+    @Override
+    public Double map(String digit) {
+        return Double.parseDouble(digit);
+    }
+}
