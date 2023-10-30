@@ -1,5 +1,8 @@
 package com.romanko.demo.generics.example;
 
+/**
+ * 1.1 What generics are and why we need them.
+ * */
 public class GenericVsNoGenericComparison {
 
     public static class Generic {

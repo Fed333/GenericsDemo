@@ -1,14 +1,16 @@
 package com.romanko.demo.generics.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
+ * 1.2 Generic syntax
  * The shelter consists of enclosures and can contain several species inside different enclosures.
  * */
 @Getter
